@@ -1,0 +1,106 @@
+---
+type TLinks = {
+    name: string
+    url: string
+    newTab?: boolean
+}
+
+const Links: TLinks[] = [
+    {
+        name: 'Knotz.Link',
+        url: 'https://knotz.link',
+        newTab: true
+    },
+    {
+        name: 'SzansaSpotkania.pl',
+        url: 'https://szansaspotkania.pl',
+        newTab: true
+    },
+    {
+        name: 'Biografia',
+        url: '#'
+    },
+    {
+        name: 'Działalność',
+        url: '#'
+    },
+    {
+        name: 'Knotakt',
+        url: '#'
+    }
+]
+
+---
+
+<header class="header">
+    <nav class="header_nav">
+        <h1 class="header_main-name">KsaweryKnotz.pl</h1>
+        <ul class="header_nav-list">
+           {
+            Links.map(({name, url, newTab})=> (
+            <li class="header_nav-list-item">
+                <a class="header_nav-list-item-link" href={url} target={newTab ? '_blank': ''}>{name}</a>
+            </li>
+            ))
+           }
+        </ul>
+        <a href="#" class="donate-btn">Wesprzyj Mnie!</a>
+    </nav>
+</header>
+
+<style>
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        /* height: 44px; */
+        width: 100%;
+        padding: 16px;
+        border-bottom: 1px solid #fff;
+        backdrop-filter: blur(4px);
+       
+    }
+
+    .header_nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header_main-name {
+        flex: 1;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        margin-left: 32px;
+    }
+
+    .header_nav-list {
+        display: flex;
+        gap: 40px;
+        margin-right: 40px;
+    }
+
+
+    .header_nav-list-item {
+        font-size: 24px;
+        font-weight: 700;
+
+    }
+
+    .header_nav-list-item-link {
+        color: #fff;
+    }
+
+    .donate-btn {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 6px 3px;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+
+    }
+
+</style>
