@@ -1,0 +1,49 @@
+---
+import MainImage from "../components/main-page/MainImage.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Błąd 404! | KsaweryKnotz.pl">
+    <main class="main">
+        <MainImage />
+        <section class="section-error">
+            <h1 class="error-h1">Błąd <span style="font-family: serif;">404</span></h1>
+            <h2 class="error-h2">Nie znaleziono strony!</h2>
+            <a href="/" class="error-link">Powrót do Strony Głównej</a>
+        </section>
+
+    </main>
+</Layout>
+
+<style>
+    .main {
+        width: 100%;
+    }
+
+    .section-error {
+        text-align: center;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .error-h1 {
+        font-size: 64px;
+        font-weight: 700;
+        text-transform: uppe;
+    }
+    .error-h2 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .error-link {
+        margin-top: 32px;
+        font-size: 36px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+</style>

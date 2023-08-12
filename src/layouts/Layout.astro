@@ -31,6 +31,32 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+
+::-webkit-scrollbar-track {
+	border: 5px solid white;
+	// border color does not support transparent on scrollbar
+	// border-color: transparent;
+	background-color: #b2bec3;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+	background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #222;
+	border-left: 1px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #444;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #555;
+}
+
 	html {
 		font-family: 'Cormorant Garamond', sans-serif;
 	}
