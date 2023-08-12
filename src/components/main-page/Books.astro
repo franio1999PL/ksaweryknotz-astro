@@ -1,0 +1,89 @@
+---
+type Tbooks = {
+	url: string,
+	link: string,
+	alt: string
+}
+
+const books: Tbooks[] = [
+	{
+		url: 'seks-jest-boski.png',
+		link: '#',
+		alt: 'Seks jest boski'
+	},
+	{
+		url: '/seks-jakiego-nie-znacie.png',
+		link: '#',
+		alt: 'Seks jakiego nie znacie'
+	},
+	{
+		url: '/nie-bojcie-sie-seksu.png',
+		link: '#',
+		alt: 'Nie bójcie się seksu'
+	},
+	{
+		url: '/tesciowie-i-mlodzi.png',
+		link: '#',
+		alt: 'Teściowie i młodzi'
+	},
+	{
+		url: '/labolatorium-milosci.png',
+		link: '#',
+		alt: 'Labolatorium Miłości'
+	},
+	{
+		url: 'zaslubiny-w-bogu.png',
+		link: '#',
+		alt: 'Zaślubiny w Bogu'
+	}
+
+]
+---
+
+
+<section class="section-books">
+    <h1 class="books__h1">KSIĄŻKI</h1>
+    <div class="books__list-wrapper">
+        <ul class="books__list">
+            {
+                books.map(({url, link, alt})=> (
+                    <li class="books__list-item">
+                        <img class="books__image" src={`/books/${url}`} alt={alt} />
+                    </li>
+                ))
+            }
+        </ul>
+        
+    </div>
+</section>
+
+<style>
+    .section-books {
+		background: #232323;
+		width: 100%;
+		height: 340px;
+	}
+
+	.books__h1 {
+		color: #fff;
+		font-size: 32px;
+		font-weight: 700;
+		text-align: center;
+		padding: 8px;
+		margin-bottom: 15px;
+	}
+
+	.books__list-wrapper {
+		/*  */
+	}
+
+	.books__list {
+		display: flex;
+		flex: 1;
+		justify-content: space-around;
+	}
+	
+	.books__image {
+		border: 1px solid #000;
+	}
+</style>
