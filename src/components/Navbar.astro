@@ -30,6 +30,8 @@ const Links: TLinks[] = [
     }
 ]
 
+const outline = "#80747480"
+
 ---
 
 <header class="header">
@@ -48,7 +50,7 @@ const Links: TLinks[] = [
     </nav>
 </header>
 
-<style>
+<style define:vars={{ outline }}>
     .header {
         position: sticky;
         top: 0;
@@ -74,6 +76,8 @@ const Links: TLinks[] = [
         font-weight: 700;
         color: #fff;
         margin-left: 32px;
+        text-shadow: -1px -1px 0 #80747480, 1px -1px 0 #80747480, -1px 1px 0 #80747480, 1px 1px 0 #80747480; /* Cienie tworzące efekt obrysu */
+
     }
 
     .header_nav-list {
@@ -91,7 +95,7 @@ const Links: TLinks[] = [
 
     .header_nav-list-item-link {
         color: #fff;
-        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Cienie tworzące efekt obrysu */
+        text-shadow: -1px -1px 0 #80747480, 1px -1px 0 #80747480, -1px 1px 0 #80747480, 1px 1px 0 #80747480; /* Cienie tworzące efekt obrysu */
     }
 
     .donate-btn {
@@ -101,7 +105,7 @@ const Links: TLinks[] = [
         border: 1px solid #fff;
         border-radius: 4px;
         color: #fff;
-
+        text-shadow: -1px -1px 0 #80747480, 1px -1px 0 #80747480, -1px 1px 0 #80747480, 1px 1px 0 #80747480; /* Cienie tworzące efekt obrysu */
     }
 
 </style>
